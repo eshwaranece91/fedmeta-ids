@@ -1,0 +1,8 @@
+baseline:
+  name: perflid
+  algorithm: perflid
+  K_train: 3
+  personalization_head: true
+  batch_size: 32
+  learning_rate: 0.001
+  fl_rounds: 100

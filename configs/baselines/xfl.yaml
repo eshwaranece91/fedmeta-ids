@@ -1,0 +1,9 @@
+baseline:
+  name: xfl
+  algorithm: xfl
+  compression: extreme
+  quantize_bits: 4
+  local_epochs: 5
+  batch_size: 32
+  learning_rate: 0.001
+  fl_rounds: 100
