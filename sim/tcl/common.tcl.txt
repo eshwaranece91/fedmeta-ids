@@ -1,0 +1,25 @@
+# Common Aqua-Sim setup for FedMeta-IDS
+set ns [new Simulator]
+set tracefile [open "results/raw/out.tr" w]
+$ns trace-all $tracefile
+
+# Channel
+set opt(chan) Channel/UnderwaterChannel
+set opt(prop) Propagation/UnderwaterPropagation
+
+# Node configuration
+for {set i 0} {$i < $opt(nn)} {incr i} {
+    set node_($i) [$ns node]
+    $node_($i) add-agent [new Agent/FedMeta]
+}
+
+# Run
+$ns at $opt(duration) "finish"
+proc finish {} {
+    global ns tracefile
+    $ns flush-trace
+    close $tracefile
+    exit 0
+}
+
+$ns run

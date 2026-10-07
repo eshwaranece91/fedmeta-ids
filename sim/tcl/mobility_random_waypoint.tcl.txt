@@ -1,0 +1,11 @@
+# Random-waypoint mobility for AUVs
+proc random_waypoint {node_id area speed_min speed_max} {
+    global ns
+    set x [expr rand() * $area]
+    set y [expr rand() * $area]
+    set z [expr rand() * 100]
+    set speed [expr $speed_min + rand() * ($speed_max - $speed_min)]
+    $ns at 0.0 "$node_($node_id) set X_ $x"
+    $ns at 0.0 "$node_($node_id) set Y_ $y"
+    $ns at 0.0 "$node_($node_id) set Z_ $z"
+}

@@ -1,0 +1,9 @@
+set opt(nn) 500
+set opt(edge_gw) 20
+set opt(area) 8000
+set opt(bandwidth_kbps) 10
+set opt(delay_ms) 300
+set opt(packet_loss) 0.10
+set opt(duration) 14400
+
+source "sim/tcl/common.tcl"

@@ -1,0 +1,10 @@
+# FedMeta-IDS small topology: 50 nodes, 5 edge gateways
+set opt(nn) 50
+set opt(edge_gw) 5
+set opt(area) 1000
+set opt(bandwidth_kbps) 10
+set opt(delay_ms) 300
+set opt(packet_loss) 0.10
+set opt(duration) 3600
+
+source "sim/tcl/common.tcl"

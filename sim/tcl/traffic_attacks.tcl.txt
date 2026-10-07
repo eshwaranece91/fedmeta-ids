@@ -1,0 +1,18 @@
+# Attack traffic generators for FedMeta-IDS
+proc start_ddos {node_id rate} {
+    global ns
+    set udp [new Agent/UDP]
+    $ns attach-agent $node_($node_id) $udp
+    set cbr [new Application/Traffic/CBR]
+    $cbr set rate_ ${rate}Mb
+    $cbr attach-agent $udp
+    $ns at 10.0 "$cbr start"
+}
+
+proc start_wormhole {node_a node_b} {
+    # Tunnel packets between node_a and node_b
+}
+
+proc start_sinkhole {node_id} {
+    # Attract traffic toward node_id
+}
