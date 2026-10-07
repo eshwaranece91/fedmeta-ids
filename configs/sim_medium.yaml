@@ -1,0 +1,44 @@
+simulation:
+  name: sim_medium
+  nodes: 200
+  edge_gateways: 10
+  duration_s: 7200
+  area_m: 3000
+
+acoustic:
+  bandwidth_kbps: 10
+  delay_ms: [100, 500]
+  packet_loss: [0.05, 0.20]
+  fading: rayleigh
+
+energy:
+  static_sensor_mj: 50
+  glider_mj: 100
+  auv_mj: 200
+  edge_gateway_mj: 150
+
+non_iid:
+  alpha: 0.5
+  partition: dirichlet
+
+training:
+  fl_rounds: 100
+  local_epochs: 5
+  K_train: 3
+  K_eval: 5
+  batch_size: 32
+  learning_rate: 0.001
+  meta_learning_rate: 0.0005
+
+compression:
+  prune_sparsity: 0.30
+  quantize_bits: 8
+  dp_sigma: 0.5
+
+aggregation:
+  robust: trimmed_mean
+  trim_ratio: 0.10
+  cosine_threshold: 0.30
+
+seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+output_dir: results/

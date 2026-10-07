@@ -1,0 +1,9 @@
+model:
+  name: static_sensor
+  architecture: ffn
+  layers: [64, 32, 16]
+  input_dim: 16
+  num_classes: 6       # benign + 5 attacks
+  dropout: 0.1
+  prune_sparsity: 0.30
+  quantize_bits: 8

@@ -1,0 +1,10 @@
+model:
+  name: auv
+  architecture: cnn1d
+  channels: [16, 32, 64]
+  kernel_size: 3
+  input_dim: 16
+  num_classes: 6
+  dropout: 0.2
+  prune_sparsity: 0.30
+  quantize_bits: 8
