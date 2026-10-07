@@ -1,0 +1,32 @@
+
+---
+
+### File 26: `data/download_cicids2017.sh`
+
+```bash
+#!/usr/bin/env bash
+# Download CIC-IDS-2017 from UNB CIC.
+set -euo pipefail
+
+OUT_DIR="data/raw/cicids2017"
+mkdir -p "$OUT_DIR"
+
+BASE="https://iscxdownloads.cs.unb.ca/iscxdownloads/CIC-IDS-2017/CSVs"
+FILES=(
+  "Monday-WorkingHours.pcap_ISCX.csv"
+  "Tuesday-WorkingHours.pcap_ISCX.csv"
+  "Wednesday-workingHours.pcap_ISCX.csv"
+  "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv"
+  "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv"
+  "Friday-WorkingHours-Morning.pcap_ISCX.csv"
+  "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv"
+  "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv"
+)
+
+for f in "${FILES[@]}"; do
+  echo "Downloading $f ..."
+  wget -q --show-progress -O "$OUT_DIR/$f" "$BASE/$f" || \
+    echo "WARNING: failed to fetch $f — download manually from https://www.unb.ca/cic/datasets/ids-2017.html"
+done
+
+echo "Done. Files in $OUT_DIR"
