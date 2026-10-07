@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Results
+results/raw/
+results/detection/
+results/communication/
+results/energy/
+results/security/
+results/ablation/
+results/scalability/
+results/**/*.log
+
+# Data (downloaded, not shipped)
+data/raw/
+data/splits/*.json
+
+# Models (large binaries — use Git LFS if shipping)
+models_trained/*.pt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store

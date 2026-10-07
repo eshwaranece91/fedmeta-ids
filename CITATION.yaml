@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the paper and the Zenodo DOI."
+title: "FedMeta-IDS: Federated Meta-Learning for Rapid Adaptation of In-Network Intrusion Detection in Heterogeneous Underwater IoT"
+abstract: "Artifact package for the FedMeta-IDS framework, including source code, simulation scripts, trained models, and figure-generation code."
+authors:
+  - family-names: Logeshwaran
+    given-names: Jaganathan
+    affiliation: "CHRIST University, Bengaluru, India"
+  - family-names: Hamza
+    given-names: Rafik
+    affiliation: "Tokyo International University, Tokyo, Japan"
+version: 1.0.0
+doi: 10.5281/zenodo.XXXXXXX
+date-released: 2026-07-30
+license: MIT
+keywords:
+  - federated learning
+  - meta-learning
+  - intrusion detection
+  - underwater IoT
+  - Aqua-Sim
+  - edge intelligence

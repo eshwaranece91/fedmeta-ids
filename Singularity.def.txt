@@ -1,0 +1,13 @@
+Bootstrap: docker
+From: fedmeta-ids:latest
+
+%post
+    cd /app
+    python3 -c "import torch; print('Torch:', torch.__version__)"
+
+%runscript
+    exec bash /app/experiments/run_all.sh "$@"
+
+%labels
+    Author Jaganathan Logeshwaran, Rafik Hamza
+    Version 1.0.0
