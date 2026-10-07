@@ -1,0 +1,34 @@
+
+---
+
+### File 92: `docs/DATASETS.md`
+
+```markdown
+# Datasets
+
+## CIC-IDS-2017
+
+- Source: University of New Brunswick
+- URL: https://www.unb.ca/cic/datasets/ids-2017.html
+- Size: 2.8M flows, 79 features, 14 attack types
+- License: CC-BY
+
+## AIDPS Lab Underwater Dataset
+
+- Source: IEEE DataPort (Das et al., 2024)
+- URL: https://ieee-dataport.org/
+- Size: 29K flows, 16 features, 5 attack types
+- License: IEEE DataPort terms
+
+## CICIoT2023
+
+- Source: University of New Brunswick
+- URL: https://www.unb.ca/cic/datasets/iotdataset-2023.html
+- Size: 33M flows, 46 features, 33 attack types
+- License: CC-BY
+
+## Harmonization
+
+All three datasets are mapped to a common 16-D feature space via
+`data/harmonize.py`. Features are min-max normalized using training-split
+statistics only.

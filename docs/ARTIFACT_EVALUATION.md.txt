@@ -1,0 +1,16 @@
+
+---
+
+### File 91: `docs/ARTIFACT_EVALUATION.md`
+
+```markdown
+# Artifact evaluation guide
+
+## 30-minute quick check
+
+```bash
+git clone https://github.com/fedmeta-ids/fedmeta-ids.git
+cd fedmeta-ids
+docker build -t fedmeta-ids:latest .
+docker run --rm fedmeta-ids:latest \
+  bash experiments/run_all.sh --config configs/sim_small.yaml --seed 0 --smoke
